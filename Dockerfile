@@ -9,3 +9,7 @@ RUN echo "pub  4096R/F4A80EB5 2014-06-23 CentOS-7 Key (CentOS 7 Official Signing
 # Base soft
 RUN echo "installonlypkgs=procps-ng" >> /etc/yum.conf &&\
     yum install -y epel-release &&  yum install -y net-utils make wget git tar vim  python-setuptools supervisor hostname; yum clean all
+
+# Supervisor
+ADD conf/supervisord.conf /etc/supervisord.conf
+ADD conf/supervisor-base.ini /etc/supervisord.d/base.ini
