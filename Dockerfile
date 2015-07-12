@@ -15,3 +15,5 @@ WORKDIR $WORKDIR
 # Supervisor
 ADD conf/supervisord.conf /etc/supervisord.conf
 ADD conf/supervisor-base.ini /etc/supervisord.d/base.ini
+
+CMD ["/usr/bin/supervisord"]
