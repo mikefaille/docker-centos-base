@@ -9,7 +9,7 @@ RUN echo "installonlypkgs=procps-ng" >> /etc/yum.conf &&\
     yum install -y epel-release &&  yum install -y net-utils make wget git tar vim  python-setuptools supervisor hostname; yum clean all
 
 ENV WORKDIR /data
-RUN mkdir /data
+RUN mkdir -p /data/persistent
 WORKDIR $WORKDIR
 
 # Supervisor
