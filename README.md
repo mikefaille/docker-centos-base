@@ -1,1 +1,1 @@
-# docker-centos-java
+# docker-centos-base
